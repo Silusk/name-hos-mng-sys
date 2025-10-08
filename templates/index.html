@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare Hospital</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <h1>CityCare Hospital</h1>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#doctors">Doctors</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Compassionate Care, Advanced Treatment</h2>
+            <p>We provide world-class medical services with highly qualified doctors and state-of-the-art facilities.</p>
+            <a href="#contact" class="btn">Book Appointment</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <i class="fas fa-stethoscope"></i>
+                <h3>General Consultation</h3>
+                <p>Comprehensive medical consultation by expert doctors for all conditions.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Cardiology</h3>
+                <p>Advanced cardiac care with modern diagnostic and treatment methods.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-x-ray"></i>
+                <h3>Radiology</h3>
+                <p>High-quality imaging services including X-rays, CT scans, and MRI scans.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-pills"></i>
+                <h3>Pharmacy</h3>
+                <p>24/7 availability of essential medicines and healthcare products.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-user-nurse"></i>
+                <h3>Emergency Care</h3>
+                <p>Immediate attention and treatment for all emergency medical conditions.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-baby"></i>
+                <h3>Pediatrics</h3>
+                <p>Expert care for infants, children, and adolescents from experienced pediatricians.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors" id="doctors">
+        <h2>Meet Our Doctors</h2>
+        <div class="doctor-cards">
+            <div class="doctor-card">
+                <img src="{{ url_for('static',filename='images/d1.jpg') }}" alt="Doctor">
+                <h3>Dr. John Smith</h3>
+                <p>Cardiologist</p>
+            </div>
+            <div class="doctor-card">
+                <img src="{{ url_for('static',filename='images/d2.jpg') }}" alt="Doctor">               <h3>Dr. Emma Johnson</h3>
+                <p>Pediatrician</p>
+            </div>
+            <div class="doctor-card">
+         <img src="{{ url_for('static',filename='images/d3.jpg') }}" alt="Doctor">          <h3>Dr. Michael Lee</h3>
+                <p>Radiologist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About CityCare Hospital</h2>
+        <div class="about-content">
+            <p>CityCare Hospital has been serving the community for over 20 years, combining compassionate care with advanced medical technology. Our team of highly skilled professionals ensures the best treatment for every patient.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm" method="POST" action="/">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="subject" placeholder="Subject">
+    <textarea name="message" rows="5" placeholder="Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>   </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CityCare Hospital. All Rights Reserved.</p>
+        <div>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <!-- External JS -->
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+</body>
+</html>
